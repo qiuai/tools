@@ -1,2 +1,6 @@
 /Data/Runtime
 /Www/Html
+/Conf/config.global.php
+/Conf/db.global.php
+/Data/Upload
+/App/Home/Conf/domain.php
