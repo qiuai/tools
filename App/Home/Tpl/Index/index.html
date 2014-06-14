@@ -1,0 +1,525 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN"> 
+<head> 
+<title>在线工具 —— 开源中国社区</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="Content-Language" content="zh-CN" /> 
+<meta name="keywords" content="开源中国 在线工具,ostools,jsbin,加密/解密，Markdown,less,java api,php api,node.js api,QR Code"/>
+<meta name="description" content="开源中国在线工具,ostools为开发设计人员提供在线工具，提供jsbin在线 CSS、JS 调试，在线 Java API文档,在线 PHP API文档,在线 Node.js API文档,Less CSS编译器，MarkDown编译器等其他在线工具" />
+<link rel="shortcut icon" href="http://tool.oschina.net/img/favicon.ico" type="image/x-icon" /> 
+<link rel="stylesheet" href="http://tool.oschina.net/css/basic.css?20120912" type="text/css"/> 
+<script type="text/javascript" src='http://tool.oschina.net/js/jquery/jquery-1.7.2.js'></script>
+<script type="text/javascript" src='http://tool.oschina.net/js/jquery/jquery.cookies.2.2.0.min.js'></script>
+<link rel="stylesheet" href='http://tool.oschina.net/js/bootstrap/css/bootstrap.min.css'/>
+<script src='http://tool.oschina.net/js/bootstrap/js/bootstrap.min.js'></script>
+
+</head>
+<body>
+	<!--     头部header开始    -->
+<div id="header">
+	<div class="wrapper">
+		<div id="mainSearch">
+										
+				<!-- Put the following javascript before the closing </head> tag. -->
+<style>
+.go_search {width: 300px;}
+.go_search .gsc-input td,.go_search .gsc-input tddiv {padding:0 0 0 0;margin:0 0 0 0;height:23px;}
+.go_search .gsc-input input:focus{ 
+border:none;
+
+}
+.go_search .gsc-input input {
+	border:none;
+	height:23px;
+	width: 100%;
+	padding: 0px;
+	border: none;
+	margin: 0px;
+	height: auto;
+	outline: none;
+	-webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+	background-image: url(http://www.google.com/cse/intl/zh_CN/images/google_custom_search_watermark.gif);
+	background-color: rgb(255, 255, 255);
+	background-position: 0% 50%;
+	background-repeat: no-repeat no-repeat;
+}
+</style>
+
+<div class="go_search">
+<!-- Place this tag where you want the search box to render -->
+</div>
+		</div>
+		<div id="logo" class="texthidden" onclick="javascript:location.href='http://tool.oschina.net/'">
+			<h1>开源中国在线工具</h1>
+		</div>
+	</div>
+</div>
+<!--     头部header结束    -->
+	<div class="wrapper">
+<script>
+$(document).ready(function(){
+	$(".latestTool").mouseover(function(){
+		$(".detail").hide();
+		var detail = $(this).find(".detail");
+		$(this).addClass("toolActive");
+		detail.show();
+		$(this).mouseout(function(){
+			detail.hide();
+			$(".toolActive").removeClass("toolActive");
+		});
+	});
+	
+});
+
+</script>
+<style>
+.latestTool .t_title{font-size:13.5pt;font-weight:normal;}
+#mainContent{font-family:Microsoft YaHei, 微软雅黑, Verdana, sans-serif, 宋体;}
+.tool_index ul{
+display:inline-block;
+margin:10px 9px 10px 9px;
+padding:0 0 0 0;
+width:144px;}
+.tool_index ul strong{margin-left:0px;font-size:12.5pt;}
+</style>
+<!--[if lte IE 7]>
+<style>
+.tool_index ul{display:inline;zoom 1;margin:10px 5px 10px 5px;width:145px;}
+.tool_index ul strong{margin-left:10px;}
+</style>
+<![endif]-->
+
+<!--     主体mainContent开始    -->
+<div id="mainContent" class="wrapper">
+	
+	<div class="column clearfix">
+		
+			<h2>工具分类索引</h2>
+	<div class="tool_index clearfix">
+    		<ul class="nav nav-list nav-stacked">
+				<strong><a href="http://tool.oschina.net/apidocs">常用文档</a></strong>
+				<li class="divider"><li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=jdk-zh">JDK6中文文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=jdk_7u4">JDK7英文文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=android/reference">Android文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=javaEE6">JavaEE6.0文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=Spring-3.1.1">Spring3文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=scala-docs-2.9.2">Scala文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=jquery">jQuery参考</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=php-zh">PHP中文文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=mysql-5.5-en">MySQL5.5手册</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=cpp%2Fen%2Fc.html">C++参考手册</a></li>
+				<li><a href="http://tool.oschina.net/apidocs">更多(120+)...</a></li>
+            </ul>
+			 <ul class="nav nav-list nav-stacked">
+				<strong><a href="http://tool.oschina.net/commons">常用对照表</a></strong>
+				<li class="divider"><li>
+				<li><a href="http://tool.oschina.net/commons">HTTP Mime-type</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=2">HTML转义字符</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=3">RGB颜色参考</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=4">ASCII对照表</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=5">HTTP状态码详解</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=6">Java运算符对照</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=6#c_">C语言运算符对照</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=6#php_">PHP运算符对照</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=6#python_">Python运算符对照</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=7">TCP/UDP端口参考</a></li>
+				<li><a href="http://tool.oschina.net/commons?type=8">网页字体参考</a></li>
+            </ul>
+			<ul class="nav nav-list nav-stacked">
+				<strong><a href="#">代码处理</a></strong>
+				<li class="divider"><li>
+				<li><a href="http://tool.oschina.net/highlight">代码着色/高亮</a></li>
+				<li><a href="http://tool.oschina.net/diff">代码对比/归并</a></li>
+				<li><a href="http://tool.oschina.net/codeformat/xml">XML代码格式化</a></li>
+				<li><a href="http://tool.oschina.net/codeformat/css">CSS代码格式化</a></li>
+				<li><a href="http://tool.oschina.net/codeformat/json">JSON代码格式化</a></li>
+				<li><a href="http://tool.oschina.net/codeformat/js">JS代码格式化</a></li>
+				<li><a href="http://tool.oschina.net/codeformat/java">Java代码格式化</a></li>
+				<li><a href="http://tool.oschina.net/codeformat/sql">SQL代码格式化</a></li>
+				<li><a href="http://tool.oschina.net/less">LESS编译器</a></li>
+				<li><a href="http://tool.oschina.net/markdown">MarkDown编译器</a></li>
+				<li><a href="http://tool.oschina.net/mathml">MathML编辑</a></li>
+            </ul>
+			<ul class="nav nav-list nav-stacked">
+				<strong><a href="#">Html|Js|Css工具</a></strong>
+				<li class="divider"><li>
+				<li><a href="http://runjs.cn">JS在线编辑(RunJS)</a></li>
+				<li><a href="http://tool.oschina.net/jscompress">JS代码压缩</a></li>
+				<li><a href="http://tool.oschina.net/jscompress">CSS代码压缩</a></li>
+				<li><a href="http://tool.oschina.net/jscompress?type=2">HTML代码压缩</a></li>
+				<li><a href="http://tool.oschina.net/jscompress?type=3">多JS文件合并压缩</a></li>
+				<li><a href="http://tool.oschina.net/ubb">HTML/UBB转换</a></li>
+				<li><a href="http://tool.oschina.net/csv2tb">CSV转HTML表格</a></li>
+				<li><a href="http://tool.oschina.net/jquery">jQuery分页插件</a></li>
+				<li><a href="http://tool.oschina.net/jquery?type=2">jQuery语法着色</a></li>
+				<li><a href="http://tool.oschina.net/jquery?type=3">jQuery对话框插件</a></li>
+				<li><a href="http://tool.oschina.net/jquery?type=4">jQuery提示插件</a></li>
+            </ul>
+			 <ul class="nav nav-list nav-stacked">
+				<strong><a href="#">加密/转码工具</a></strong>
+				<li class="divider"><li>
+				<li><a href="http://tool.oschina.net/htpasswd" style="color:#A00;font-weight:bold;">[新]生成htpasswd</a></li>
+				<li><a href="http://tool.oschina.net/encrypt?type=3">BASE64编码解码</a></li>
+				<li><a href="http://tool.oschina.net/encrypt">加密/解密</a></li>
+				<li><a href="http://tool.oschina.net/encrypt?type=2">散列/哈希</a></li>
+				<li><a href="http://tool.oschina.net/encrypt?type=4">图片转BASE64编码</a></li>
+				<li><a href="http://tool.oschina.net/hexconvert">进制转换</a></li>
+				<li><a href="http://tool.oschina.net/encode?type=2">Native转UTF-8</a></li>
+				<li><a href="http://tool.oschina.net/encode?type=3">Native转ASCII</a></li>
+				<li><a href="http://tool.oschina.net/encode?type=4">URL转码</a></li>
+				<li><a href="http://tool.oschina.net/qr">生成QrCode</a></li>
+				<li><a href="http://tool.oschina.net/qr?type=2">QrCode解码</a></li>
+            </ul>
+			<ul class="nav nav-list nav-stacked">
+				<strong><a href="#">其他实用工具</a></strong>
+				<li class="divider"><li>
+				<li><a href="http://tool.oschina.net/regex">正则表达式测试</a></li>
+				<li><a href="http://tool.oschina.net/diff">代码对比/归并</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=postgresql9.1">Postgresql9.1文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=rails">Rails文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=hibernate-4.1.4">Hibernate文档</a></li>
+				<li><a href="http://tool.oschina.net/apidocs/apidoc?api=struts-2.3.4">Struts文档</a></li>
+				<li><a href="http://tool.oschina.net/jquery">jQuery插件演示</a></li>
+				<li><a href="http://runjs.cn">JS/CSS编辑测试</a></li>
+				<li><a href="http://tool.oschina.net/codeformat">代码格式化</a></li>
+				<li><a href="http://tool.oschina.net/apidocs">文档大全</a></li>
+				<li><a href="http://tool.oschina.net/jscompress">JS/CSS压缩</a></li>
+            </ul>
+		</div>
+		<h2>常用工具</h2>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/apidocs.gif" alt="在线API文档" target="#apidocs_detail"/></div>
+				<div class="t_title"><a href="apidocs">API 文档</a></div>
+				<div class="intro">在线API文档工具提供各种语言的几十种文档，供开发者在线查阅。</div>
+				<div class="tags">标签：<em>JDK</em>，<em>JavaEE</em>，<em>JQuery</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="apidocs_detail">
+				<div><a href="apidocs"><img src="http://tool.oschina.net/img/logo/apidocs.gif" alt="在线API文档" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="apidocs">API 文档</a></div>
+				<div class="detailIntro">在线API文档工具提供各种语言的几十种在线文档，包括常见的JAVA、JQuery、Ruby等，供开发者在线查阅。</div>
+				<div class="detailTags">标签：<em>JDK</em>，<em>JavaEE</em>，<em>JQuery</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/runjs.gif" alt="RunJS" target="#runjs_detail"/></div>
+				<div class="t_title"><a href="http://runjs.cn">RunJS</a></div>
+				<div class="intro">RunJS，在线编辑运行HTML、CSS、JS，让JS飞一会儿！</div>
+				<div class="tags">标签：<em>RunJS</em>，<em>JS</em>，<em>CSS</em>，<em>HTML</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="runjs_detail">
+				<div><a href="http://runjs.cn"><img src="http://tool.oschina.net/img/logo/runjs.gif" alt="RunJS" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="http://runjs.cn">RunJS</a></div>
+				<div class="detailIntro">RunJS，在线编辑运行HTML、CSS、JS，让JS飞一会儿！提供代码编辑，预览，分享，Fork，主题设置等多种功能。</div>
+				<div class="detailTags">标签：<em>RunJS</em>，<em>JS</em>，<em>CSS</em>，<em>HTML</em></div>
+			</div>
+		</div>
+		<div class="latestTool">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/alloyphoto.gif" alt="alloyphoto" target="#alloyphoto_detail"/></div>
+				<div class="t_title"><a href="alloyphoto">AlloyPhoto</a></div>
+				<div class="intro">AlloyPhoto是基于HTML5技术的开发的在线图片处理平台</div>
+				<div class="tags">标签：<em>JavaScript</em>，<em>图片处理</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="alloyphoto_detail">
+				<div><a href="alloyphoto"><img src="http://tool.oschina.net/img/logo/alloyphoto.gif" alt="alloyphoto" width="96" class="ToolLogo"/></a></div>					
+                <div class="t_title"><a href="alloyphoto">AlloyPhoto</a></div>
+				<div class="detailIntro">AlloyPhoto是基于HTML5技术的专业级图像处理引擎—— <a href="http://www.oschina.net/p/alloyimage">AlloyImage</a> 开发的在线图片处理平台</div>
+				<div class="detailTags">标签：<em>JavaScript</em>，<em>图片处理</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/commons.gif" alt="常用对照表" target="#commons_detail"/></div>
+                <div class="t_title"><a href="commons">常用对照表</a></div>
+				<div class="intro">这里提供IT开发人员常用的对照表，比如ASCII，HTML转义字符，RGB颜色等。</div>
+                <div class="tags">标签：<em>ASCII</em>，<em>HTML转义</em>，<em>RGB</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="commons_detail">
+				<div><a href="commons" ><img src="http://tool.oschina.net/img/logo/commons.gif" alt="常用对照表" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="commons">常用对照表</a></div>
+				<div class="detailIntro">提供IT开发人员常用的对照表，比如ASCII，HTML转义字符，RGB颜色，Http Content-type等。</div>
+				<div class="detailTags">标签：<em>ASCII</em>，<em>HTML转义</em>，<em>RGB颜色</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/regex.gif" alt="在线正则表达式测试" target="#regex_detail"/></div>
+				<div class="t_title"><a href="regex" >正则表达式测试</a></div>
+				<div class="intro">在线正则表达式匹配、替换</div>
+				<div class="tags">标签：<em>正则表达式</em>，<em>regex</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="regex_detail">
+				<div><a href="regex" ><img src="http://tool.oschina.net/img/logo/regex.gif" alt="在线正则表达式测试" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="regex" >正则表达式测试</a></div>
+				<div class="detailIntro">在线正则表达式匹配、替换，另有多种常用正则表达式提供方便使用</div>
+				<div class="detailTags">标签：<em>正则表达式</em>，<em>regex</em></div>
+			</div>
+		</div>
+		<div class="latestTool">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/encrypt.gif" alt="在线加密/解密，散列/哈希" target="#encrypt_detail"/></div>
+				<div class="t_title"><a href="encrypt">加密/解密，哈希</a></div>
+				<div class="intro">这个小工具提供在线文本加密/解密，散列，提供BASE64、SHA1、MD5、AES等多种算法</div>
+				<div class="tags">标签：<em>SHA1</em>，<em>MD5</em>，<em>AES</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="encrypt_detail">
+				<div><a href="encrypt"><img src="http://tool.oschina.net/img/logo/encrypt.gif" alt="在线加密/解密，散列/哈希" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="encrypt">加密/解密，散列/哈希</a></div>
+				<div class="detailIntro">这个小工具提供在线文本加密/解密，散列，提供SHA1、MD5、HMAC、AES、RC4、Rabbit、Base64等多种算法，采用开源的Crypto-JS库实现。</div>
+				<div class="detailTags">标签：<em>SHA1</em>，<em>MD5</em>，<em>AES</em>，<em>DES</em>，<em>Base64</em></div>
+			</div>
+		</div>	
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/qr.gif" alt="在线生成 QR Code" target="#qr_detail"/></div>
+				<div class="t_title"><a href="qr" >生成二维条形码</a></div>
+				<div class="intro">生成生成QR码，能够提供多参数设置生成QR码，可以对输出图像格式（GIF/JPEG/PNG），纠错级别，类型，边缘留白（Margin），原胞大小进行设置</div>
+				<div class="tags">标签：<em>QR</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="qr_detail">
+				<div><a href="qr" ><img src="http://tool.oschina.net/img/qr.gif" alt="在线生成 QR Code" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="qr" >生成二维条形码</a></div>
+				<div class="detailIntro">生成生成QR码，能够提供多参数设置生成QR码，可以对输出图像格式（GIF/JPEG/PNG），纠错级别，类型，边缘留白（Margin），原胞大小进行设置</div>
+				<div class="detailTags">标签：<em>QR</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/codeformat.gif" alt="在线代码格式化" target="#codeformat_detail"/></div>
+                <div class="t_title"><a href="codeformat">代码格式化</a></div>
+				<div class="intro">该工具提供对Java、JavaScript、CSS、HTML、JSON、SQL的代码格式化功能。</div>
+                <div class="tags">标签：<em>Java</em>，<em>HTML</em>，<em>SQL</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="codeformat_detail">
+				<div><a href="codeformat" ><img src="http://tool.oschina.net/img/logo/codeformat.gif" alt="在线代码格式化" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="codeformat">代码格式化</a></div>
+				<div class="detailIntro">该工具提供对Java、JavaScript、CSS、HTML、JSON、SQL的代码格式化功能。</div>
+				<div class="detailTags">标签：<em>Java</em>，<em>HTML</em>，<em>JavaScript</em>，<em>格式化</em></div>
+			</div>
+		</div>
+		<div class="latestTool">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/highlight.gif" alt="在线代码着色/高亮" target="#highlight_detail"/></div>
+				<div class="t_title"><a href="highlight" >代码着色/高亮</a></div>
+				<div class="intro">此工具可以提供在线将代码关键字着色、加行号等功能，并提供输出HTML.</div>
+				<div class="tags">标签：<em>代码着色</em>，<em>代码高亮</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="hexconvert_detail">
+				<div><a href="highlight" ><img src="http://tool.oschina.net/img/logo/highlight.gif" alt="在线代码着色/高亮" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="highlight" >代码着色/高亮</a></div>
+				<div class="detailIntro">此工具可以提供在线将代码关键字着色、加行号等功能，并提供输出HTML，支持常见的20多种编程语言，方便在做代码演示的时候使用。</div>
+				<div class="detailTags">标签：<em>代码着色</em>，<em>代码高亮</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/jscompress.gif" alt="在线JS/CSS压缩" target="#jscompress_detail"/></div>
+				<div class="t_title"><a href="jscompress" >JS/CSS压缩</a></div>
+				<div class="intro">用户可以通过该工具在线压缩Javascript和CSS代码。</div>
+				<div class="tags">标签：<em>Javascript</em>，<em>CSS</em>，<em>压缩</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="jscompress_detail">
+				<div><a href="jscompress" ><img src="http://tool.oschina.net/img/logo/jscompress.gif" alt="在线JS/CSS压缩" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="jscompress" >JS/CSS压缩</a></div>
+				<div class="detailIntro">用户可以通过该工具在线压缩Javascript和CSS代码，此工具使用的是YUICompressor引擎。</div>
+				<div class="detailTags">标签：<em>Javascript</em>，<em>CSS</em>，<em>压缩</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20" >
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/encode.gif" alt="在线编码转换" target="#encode_detail"/></div>
+                <div class="t_title"><a href="encode">编码转换</a></div>
+				<div class="intro">该工具为开发者提供Native到Unicode、ASCII的编码转换</div>
+                <div class="tags">标签：<em>ASCII</em>，<em>Unicode</em>，<em>编码</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="encode_detail">
+				<div><a href="encode" ><img src="http://tool.oschina.net/img/logo/encode.gif" alt="在线编码转换" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="encode">编码转换</a></div>
+				<div class="detailIntro">该工具为开发者提供Native到Unicode、ASCII的编码转换</div>
+				<div class="detailTags">标签：<em>ASCII</em>，<em>Unicode</em>，<em>编码</em></div>
+			</div>
+		</div>
+		<div class="latestTool">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/hexconvert.gif" alt="在线进制转换" target="#hexconvert_detail"/></div>
+				<div class="t_title"><a href="hexconvert" >不同进制转换</a></div>
+				<div class="intro">此工具可以实现2~36进制之间任意进制转换，支持浮点型。</div>
+				<div class="tags">标签：<em>二进制</em>，<em>十六进制</em>，<em>进制转换</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="hexconvert_detail">
+				<div><a href="hexconvert" ><img src="http://tool.oschina.net/img/logo/hexconvert.gif" alt="在线进制转换" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="hexconvert" >不同进制转换</a></div>
+				<div class="detailIntro">此工具可以实现2~36进制之间任意进制转换，支持浮点型。</div>
+				<div class="detailTags">标签：<em>二进制</em>，<em>十六进制</em>，<em>进制转换</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/mathml.gif" alt="在线MathML编辑测试" target="#mathml_detail"/></div>
+                <div class="t_title"><a href="mathml">MathML编辑测试</a></div>
+				<div class="intro">该工具提供对MathML、LaTeX、数学公式的在线编辑，生成图片功能。</div>
+                <div class="tags">标签：<em>MathML</em>，<em>LaTeX</em>，<em>数学公式</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="mathml_detail">
+				<div><a href="mathml" ><img src="http://tool.oschina.net/img/logo/mathml.gif" alt="在线MathML编辑测试" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="mathml">MathML编辑测试</a></div>
+				<div class="detailIntro">该工具（MathML Edit）提供对MathML、LaTeX、数学公式等的在线编辑，生成图片功能。</div>
+				<div class="detailTags">标签：<em>MathML</em>，<em>LaTeX</em>，<em>数学公式</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/less.gif" alt="在线LESS编译器" target="#less_detail"/></div>
+				<div class="t_title"><a href="less">LESS编译器</a></div>
+				<div class="intro">这个工具可以在线将您的LESS代码编译成CSS代码，方便前端人员使用</div>
+				<div class="tags">标签：<em>Less</em>，<em>CSS</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="less_detail">
+				<div><a href="less"><img src="http://tool.oschina.net/img/logo/less.gif" alt="在线Less编译器" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="less">LESS编译器</a></div>
+				<div class="detailIntro">这个工具可以在线将您的LESS代码编译成CSS代码，方便前端人员使用</div>
+				<div class="detailTags">标签：<em>Less</em>，<em>CSS</em></div>
+			</div>
+		</div>
+		<div class="latestTool">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/markdown.gif" alt="在线MarkDown编译器" target="#markdown_detail"/></div>
+				<div class="t_title"><a href="markdown" >MarkDown编译器</a></div>
+				<div class="intro">这个工具可以帮助开发者将web上的文本转换成HTML文档。</div>
+				<div class="tags">标签：<em>HTML</em>，<em>Markdown</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="markdown_detail">
+				<div><a href="markdown" ><img src="http://tool.oschina.net/img/logo/markdown.gif" alt="在线MarkDown编译器" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="markdown" >MarkDown编译器</a></div>
+				<div class="detailIntro">Markdown 是一个 Web 上使用的文本到HTML的转换工具，可以通过简单、易读易写的文本格式生成结构化的HTML文档。</div>
+				<div class="detailTags">标签：<em>HTML</em>，<em>Markdown</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/ubb.gif" alt="在线UBB/HTML转换" target="#ubb_detail"/></div>
+				<div class="t_title"><a href="ubb" >UBB/HTML转换</a></div>
+				<div class="intro">此工具可以方便开发者在UBB和HTML之间互转。</div>
+				<div class="tags">标签：<em>UBB</em>，<em>HTML</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="ubb_detail">
+				<div><a href="ubb" ><img src="http://tool.oschina.net/img/logo/ubb.gif" alt="在线UBB/HTML转换" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="ubb" >UBB/HTML转换</a></div>
+				<div class="detailIntro">UBB是一种网页中的替代HTML代码的安全代码，他具有少量的文本格式，例如加粗、颜色等，此工具方便UBB/HTML互转。</div>
+				<div class="detailTags">标签：<em>UBB</em>，<em>HTML</em></div>
+			</div>
+		</div>
+		<div class="latestTool mr20" >
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/csv2tb.gif" alt="在线CSV转HTML表格" target="#csv2tb_detail"/></div>
+                <div class="t_title"><a href="csv2tb">CSV转HTML表格</a></div>
+				<div class="intro">该工具提供在线CSV转换为HTML的表格，能够快速的将CSV数据转换页面展示数据。</div>
+                <div class="tags">标签：<em>CSV</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="csv2tb_detail">
+				<div><a href="csv2tb" ><img src="http://tool.oschina.net/img/logo/csv2tb.gif" alt="在线CSV转HTML表格" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="csv2tb">CSV转HTML表格</a></div>
+				<div class="detailIntro">该工具提供在线CSV转换为HMTL的表格，能够快速的将CSV数据转换页面展示数据。</div>
+				<div class="detailTags">标签：<em>CSV</em></div>
+			</div>
+		</div>
+		<div class="latestTool">
+			<div class="toolDescription">
+				<div><img src="http://tool.oschina.net/img/logo/jquery.gif" alt="jQuery在线插件演示大全" target="#jquery_detail"/></div>
+                <div class="t_title"><a href="jquery">jQuery插件演示大全</a></div>
+				<div class="intro">该在线工具提供大量常用jQuery插件的演示，为您节省插件选择的时间，并提供在线对示例进行编辑。</div>
+                <div class="tags">标签：<em>jquery</em>，<em>插件</em></div>
+			</div>
+			<div class="detail boxShadow" style="display:none;" id="jquery_detail">
+				<div><a href="jquery" ><img src="http://tool.oschina.net/img/logo/jquery.gif" alt="jQuery在线插件演示大全" width="96" class="ToolLogo"/></a></div>					
+				<div class="t_title"><a href="jquery">jQuery插件演示大全</a></div>
+				<div class="detailIntro">该在线工具提供大量常用jQuery插件的演示，为您节省插件选择的时间，并提供在线对示例进行编辑。</div>
+				<div class="detailTags">标签：<em>jquery</em>，<em>插件</em></div>
+			</div>
+		</div>
+
+
+		
+	</div>
+	
+	<div class="column clearfix">
+		<h2>用户反馈</h2>
+		<p class="advise">工具在不断的补充和完善中，如果您有好的工具或者意见与建议，请<a data-toggle="modal" href="#advice">点击这里</a>或通过 oschina.net(#)gmail.com 告知我们。</p>
+	</div>
+</div>
+<!--     主体mainContent结束    -->
+
+	<!--     尾部footer开始    -->
+<div id="footer">
+	<p class="wrapper">
+		在线工具 由 <a href="http://www.oschina.net/" target="_blank">开源中国</a> 所有 | <a href="http://weibo.com/oschina2010" target="_blank">@新浪微博</a> |<a href="http://www.aliyun.com/" target="_blank">阿里云</a>提供服务器和带宽 |<a data-toggle="modal" href="#advice">意见反馈</a> | <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备12009483号-5</a> | <script src="http://s9.cnzz.com/stat.php?id=4420195&web_id=4420195&show=pic1" language="JavaScript"></script>
+	</p>
+</div>
+<!--     尾部footer结束    -->	<div class="modal hide fade" id="advice" style="display:none;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>在线工具 —— 开源中国社区</h3>
+      </div>
+      <div class="modal-body">
+		<p>在此填写您的意见信息：</p>
+		<form class='well' id='advice_form'>
+			<input id="tool_name_f" type='hidden' name='tool_name' value='在线工具 —— 开源中国社区'/>
+			<div class="input-prepend">
+			<span class="add-on">Email邮箱:</span><input class="input-xlarge" type="text" id="advice_email" name="email" placeholder="在此输入您的Email" onblur="javascript:verifyEmail();" title="Email邮箱"/><span style="color:#A00" id="email_error"> (必填) </span>
+			</div>
+			
+            <label class="textarea">您的建议和意见：<br><textarea name="content" id="advice_content" style="width:480px;height:150px" placeholder="在此填写对  在线工具 —— 开源中国社区 的意见和建议"></textarea></label>
+			<label class="input">验证码：
+			<img style="margin-bottom:9px;" src="http://tool.oschina.net/action/jsbin/captcha" id="captcha_code" height="30px" width="80px" onclick="this.src = '/action/jsbin/captcha?'+new Date().getTime();"/>
+			<input type="text" id="captcha_input" onkeyup="document.getElementById('verifyCode').value=this.value;" style="height:20px;width:30px;"/>
+			<input id="verifyCode" name="verifyCode" type="hidden"/></label>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">取消</a>
+        <a href="#" class="btn btn-primary" id="advice_submit" disabled='disabled'>提交建议</a>
+      </div>
+    </div>
+<script>
+function verifyEmail(){
+	if(null == $("#advice_email").val().match(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)){
+		$("#email_error").html(" email输入错误 ");
+		$("#advice_email").focus();
+	}
+	else{
+		$("#email_error").html("<i class='icon-ok'></i>");
+		$("#advice_submit").removeAttr("disabled");
+	}
+}
+$(document).ready(function (){
+	$("#advice_submit").click(function (){
+		$.post("/action/advice/add_advice",
+		{ tool_name : $("#tool_name_f").val() , email: $("#advice_email").val(), content: $("#advice_content").val() ,verifyCode: $("#verifyCode").val()},
+		function (result){
+			var m=eval('(' + result + ')');
+			if("ok"==m.msg){
+				alert("谢谢您的建议，我们会参考您的建议使ostools变得更好！");
+				$('#advice').modal('hide');
+				$("#captcha_code").attr("src",'/action/jsbin/captcha?'+new Date().getTime());
+			}
+			else{
+				alert(m.msg);
+			}
+		});
+	});
+});
+</script>
+	<a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=3&amp;fs=4&amp;textcolor=#fff&amp;bgcolor=#06C&amp;text=分享到&amp;pophcol=1"></script>
+
+	<div style="display:none;">
+		<script src="http://s19.cnzz.com/z_stat.php?id=1000448150&web_id=1000448150" language="JavaScript"></script>
+	</div>
+
+</body>
+</html>
+<!-- Generated by OSCTools.NET (Sun May 25 12:24:50 CST 2014) 5ms -->
