@@ -18,7 +18,7 @@ class StaticWebPageAction extends CommonAction{
 		$htmlPath = ROOT_PATH."/Www/Html";
 		//echo ROOT_PATH.'/App/Home/Conf/site.php';exit;
 		// 包含前台项目动态配置文件
-		$webUrl = require ROOT_PATH.'/App/Home/Conf/site.php';
+		$webUrl = require ROOT_PATH.'/App/Home/Conf/domain.php';
 		
 		// 生成网站首页
 		// 如果web目录下面html目录不存在则创建html文件夹

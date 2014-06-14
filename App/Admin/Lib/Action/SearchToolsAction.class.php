@@ -50,7 +50,7 @@ class SearchToolsAction extends CommonAction{
 	 */
 	 public function edit(){
 	 
-		$webUrl = require ROOT_PATH.'/App/Home/Conf/site.php';
+		$webUrl = require ROOT_PATH.'/App/Home/Conf/domain.php';
 		$searchToolsSort = $this->getToolsSort();
 		$this->assign('searchToolsSort',$searchToolsSort);
 		// 把图片上传的路径分配到模版中
@@ -95,7 +95,7 @@ class SearchToolsAction extends CommonAction{
 	 */
 	public function createJsConfig(){		
 		// 包含前台项目动态配置文件
-		$webUrl = require ROOT_PATH.'/App/Home/Conf/site.php';		
+		$webUrl = require ROOT_PATH.'/App/Home/Conf/domain.php';		
 		// 创建数据库对象
 		$searchTools = M('searchTools');
 		// 查询数据库
@@ -150,7 +150,7 @@ class SearchToolsAction extends CommonAction{
 		
 		
 		// 设置图片上传路径
-		$upload->savePath = ROOT_PATH.'/Www/upload/searchToolsPic/';
+		$upload->savePath = ROOT_PATH.'/Data/Upload/searchToolsPic/';
 		
 		
 		// 上传图片

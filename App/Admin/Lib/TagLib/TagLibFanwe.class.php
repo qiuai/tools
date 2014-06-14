@@ -431,7 +431,7 @@ class TagLibFanwe extends TagLib
 					
                    /**yumao add 改造方法使之可以显示图片****/
 					if($showname[1] == "tupian"){
-						$webUrl = require ROOT_PATH.'/App/Home/Conf/site.php';
+						$webUrl = require ROOT_PATH.'/App/Home/Conf/domain.php';
 						$parseStr .= '<img src="'.$webUrl['ATTACHMENT_URL'].'/searchToolsPic/{$'.$name.'.'.$field[0].'}" />';
 					} else {
 						$parseStr .= '{$'.$name.'.'.$field[0].'}';
